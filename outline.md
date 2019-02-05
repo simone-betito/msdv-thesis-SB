@@ -4,6 +4,8 @@ Conflicts that led to Stolen Art
 
 Lack of enforceable culture protection laws
 
+- UNESCO
+
 Restorative Justice
 
 - Negotiations between Countries
@@ -39,6 +41,7 @@ Indigenous Art
 - Inuit Art
 - Haida People
 - How much indigenous art was taken away during colonization?
+- Royal BC Museum
 
 Antiquities
 
