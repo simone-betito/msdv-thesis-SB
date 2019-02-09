@@ -34,6 +34,8 @@ Potential Data Sources
 - UNESCO
 - Books about repatriation
 - Who has stolen art + what has been given back?
+- Stakeholders
+- Royal BC Museum
 
 Indigenous Art
 
@@ -59,3 +61,5 @@ Tracing discourse of repatriation through geopolitical study
 - I am tracing the discourse between parties involved in the repatriation of art through case study of indigenous art because I want to find out who has more agency
 - I am tracing the discourse between countries involved in the repatriation of art through geopolitical study because I want to find out if the repatriation of symbolic objects can help reconciliation between countries
 - I want to research if looting of archaeological sites has increased due to political instability worldwide because I want to find out how this affects culture in order for my readers to understand the magnitude of the loss.
+
+- I am visualizing indicators to facilitate art repatriation discussions while also keying in on a few case studies to hopefully increase reconciliation and nation building while similarly making museums more equitable places for all.
