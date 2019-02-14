@@ -1,4 +1,4 @@
-#Thesis Outline – Repatriation#
+#Thesis Outline – Repatriation
 
 0.  **Synopsis**
     a. I am visualizing indicators to facilitate art repatriation discussions while also keying in on a few case studies to hopefully increase reconciliation and nation building.
