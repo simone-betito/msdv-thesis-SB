@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <title>
+      Simone's MS Thesis
+    </title>
+    <!--css-->
+    <link rel="stylesheet" href="https://use.typekit.net/tfz7vwf.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/tfz7vwf.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+  </header>
+  <body>
+    <div class="container">
+      <div id="slides">
+        <div id="home" class="slide-visible">
+          <div id="title">
+            <h1>Repatriation: An Approach For A Fairer Museum</h1>
+            <h5>By Simone Betito</h5>
+          </div>
+        </div>
+
+        <div id="map" class="slide-hidden">
+          <section id="modal-box">
+            <div id="dialogue">
+              <div id="modal-content">
+                <h3>About Restitution & Contextualizing the Situation</h3>
+                <p>
+                  Restitution is defined by Merriam Webster as “the restoration
+                  of something to its rightful owner.” Many authors have
+                  explored the impacts restitution has had on art, museums,
+                  culture and the party making the return request. However,
+                  universal models seem to be lacking. This project proposes a
+                  model for the determination of an item's eligibility for the
+                  return to the original owner, through data visualization
+                  giving a voice to the marginalized in the process. The
+                  marginalized described in this paper are communities who have
+                  historically been colonized or without power in the
+                  restitution discussions.
+                </p>
+
+                <p>
+                  Firstly, it will explore the history of repatriation, some of
+                  the key contested pieces and some of the positives and
+                  negatives of the most popular restitution frameworks: The
+                  United Nations Educational Scientific and Cultural
+                  Organization (UNESCO)’s Illicit Property and Trafficking Act &
+                  the Native American Graves Protection and Repatriation Act
+                  (NAGPRA). The framework is the main portion of the paper and
+                  proposes four pillars: Symbolism, Legality, Morality, and
+                  Preservation. This model will be applied to the MET’s
+                  collection through their API, as proof of reproducibility.
+                  Then the visualization will explore other potential use cases.
+                </p>
+
+                <h6>
+                  Note: Restitution and repatriation will be used
+                  interchangeably throughout this visualization.
+                </h6>
+              </div>
+              <button onclick="toggleModal()">Let's Go</button>
+            </div>
+            <div id="screen"></div>
+          </section>
+          <div id="svg-map">
+            <h1>A Look At the Movement of Artifacts</h1>
+
+            <!-- LEGEND -->
+            <p>
+              <span class="legend-repatriated"><span></span>Repatriated</span>
+              <span class="legend-not-repatriated"
+                ><span></span>Not Repatriated</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div id="model" class="slide-hidden">
+          <div>
+            <h1>Model Methodology</h1>
+
+            <div>
+              <h6>
+                What if we applied this model to the MET’s collection?
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div id="modelViz" class="slide-hidden">
+          <div>
+            <h1>Case Study: Applying the Model to the MET’s API</h1>
+            <svg id="modelVizSVG"></svg>
+          </div>
+        </div>
+
+        <div id="dataMethod" class="slide-hidden">
+          <div>
+            <h1>Data Methodology</h1>
+          </div>
+        </div>
+
+        <div id="sources" class="slide-hidden">
+          <div>
+            <h1>Sources</h1>
+          </div>
+        </div>
+
+        <div id="slide-previous-arrow">&lt;</div>
+        <div id="slide-next-arrow">&gt;</div>
+
+        <div class="dots-group">
+          <div class="dots">
+            <div class="dot dot-active" data-key="0" id="dot1"></div>
+            <div class="dot dot-inactive" data-key="1" id="dot2"></div>
+            <div class="dot dot-inactive" data-key="2" id="dot3"></div>
+            <div class="dot dot-inactive" data-key="3" id="dot4"></div>
+            <div class="dot dot-inactive" data-key="4" id="dot5"></div>
+            <div class="dot dot-inactive" data-key="5" id="dot6"></div>
+            <div class="dot dot-inactive" data-key="6" id="dot7"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="slides.js"></script>
+    <script src="main.js"></script>
+    <script src="mapViz.js"></script>
+    <script src="mainModel.js"></script>
+  </body>
+</html>
