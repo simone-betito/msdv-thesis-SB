@@ -1,11 +1,8 @@
-/*Main /*
-/* body {
-  background-image: url("/images/rendered.png");
-  height: 100vh;
-  width: 821px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #fbfbf2;} */
+/* Main */
+
+html {
+  box-sizing: border-box;
+}
 
 body {
   background-color: #fbfbf2;
@@ -71,13 +68,13 @@ p {
 .directives-font {
   font-family: "Inconsolata", monospace;
 }
-
+/* 
 #model {
   /* background-image: url("images/rendered3.jpg");
   background-repeat: repeat-x;
   background-size: contain;
   opacity: 0.75; */
-}
+/* } */
 
 /* slides */
 #slides {
@@ -88,11 +85,16 @@ p {
 #slide-next-arrow {
   cursor: pointer;
   position: fixed;
-  bottom: 10px;
-  font-size: 2em;
-  font-weight: bold;
+  bottom: 20px;
+  font-size: 2rem;
+  line-height: 1;
+  /* font-weight: bold; */
   z-index: 1;
   opacity: 0.5;
+  padding: 8px 16px;
+
+  /* width: 16px; */
+  /* height: 16px; */
 }
 
 #slide-previous-arrow {
@@ -100,6 +102,8 @@ p {
 }
 #slide-next-arrow {
   right: 1em;
+  /* background-color: #4caf50;
+  border-radius: 50%; */
 }
 
 .slide-visible {
@@ -215,7 +219,11 @@ p {
   text-align: left;
 }
 
-button {
+#modal-content p {
+  font-size: 13px;
+}
+
+#lets-go {
   border-radius: 4px;
   font-size: inherit;
   color: inherit;
@@ -223,6 +231,7 @@ button {
   position: absolute;
   bottom: 0;
   left: 0;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 /* map */
@@ -297,8 +306,87 @@ path:hover {
   }
 }
 
+/* model explainer slide */
+.squareMain {
+  display: grid;
+  padding: 10rem;
+  margin: 0 auto;
+  grid-row-gap: 2rem;
+  grid-column-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.square {
+  display: flex;
+  align-items: flex-end;
+}
+.rename-me {
+  border: solid 10px #ad8f44;
+  padding: 10px;
+  justify-self: center;
+  font-size: 12px;
+  background-color: white;
+  margin-right: 12px;
+}
+
+.squareMini {
+  border: none;
+  background-color: white;
+  box-shadow: 2px 5px #707070;
+  height: 100px;
+  width: 85px;
+  font-size: 13px;
+}
+
 /* model */
 circle {
   stroke: #000;
   opacity: 0.75;
+}
+
+.sideModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  z-index: 999;
+  color: #fff;
+  background-color: rgba(112, 112, 112, 0.89);
+  height: 100%;
+  opacity: 0.5;
+  transform: translateX(100%);
+  padding: 42px 20px 40px 20px;
+}
+
+.show-panel {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.sideModalText {
+  text-align: left;
+}
+
+.image-holder {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#close-button {
+  /* width: 30px; */
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.75rem;
+}
+
+#close-button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#close-icon {
+  max-width: 12px;
 }

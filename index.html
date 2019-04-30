@@ -28,7 +28,7 @@
         <div id="home" class="slide-visible">
           <div id="title">
             <h1>Repatriation: An Approach For A Fairer Museum</h1>
-            <h5>By Simone Betito</h5>
+            <h5>By Simone Betito / May 2019</h5>
           </div>
         </div>
 
@@ -36,7 +36,7 @@
           <section id="modal-box">
             <div id="dialogue">
               <div id="modal-content">
-                <h3>About Restitution & Contextualizing the Situation</h3>
+                <h3>About Repatriation & Why It's Important</h3>
                 <p>
                   Restitution is defined by Merriam Webster as “the restoration
                   of something to its rightful owner.” Many authors have
@@ -70,12 +70,13 @@
                   interchangeably throughout this visualization.
                 </h6>
               </div>
-              <button onclick="toggleModal()">Let's Go</button>
+              <button id="lets-go" onclick="toggleModal()">Let's Go</button>
             </div>
             <div id="screen"></div>
           </section>
           <div id="svg-map">
-            <h1>A Look At the Movement of Artifacts</h1>
+            <h1>Artifact Movement Around The World</h1>
+            <h3>Mapping Global Restitution Cases</h3>
 
             <!-- LEGEND -->
             <p>
@@ -90,10 +91,70 @@
         <div id="model" class="slide-hidden">
           <div>
             <h1>Model Methodology</h1>
-
+            <h4>Key questions that were asked in order to build the model</h4>
             <div>
+              <div class="squareMain">
+                <div class="Symbolism square">
+                  <div class="rename-me">
+                    <p>
+                      <strong>Does the item represent </strong>a religious
+                      symbol?
+                      <br />
+                      Symbolic Value? <br />
+                      Group Value? <br />
+                      Importance to national or community pride?
+                    </p>
+                  </div>
+                  <div class="squareMini">
+                    <p>Symbolism</p>
+                  </div>
+                </div>
+                <div class="legality square">
+                  <div class="rename-me">
+                    <p>
+                      <strong
+                        >Was the item taken in a consensual manner?</strong
+                      >
+                      <br />
+
+                      Was the art acquired during looting? <br />
+                      Is the ownership the result of imperialism? <br />
+                    </p>
+                  </div>
+                  <div class="squareMini">
+                    <p>Legality</p>
+                  </div>
+                </div>
+                <div class="Morality square">
+                  <div class="rename-me">
+                    <p>
+                      <strong> Is there a power imbalance </strong> between the
+                      requestor and the requestee?<br />
+                      What is the argument from the court of public opinion?<br />
+                      Is it part of the public's discussions?
+                    </p>
+                  </div>
+                  <div class="squareMini">
+                    <p>Morality</p>
+                  </div>
+                </div>
+                <div class="Preservation square">
+                  <div class="rename-me">
+                    <p>
+                      <strong>Will the item be preserved? </strong> <br />
+                      Is the item reproducible? <br />
+                      What is the Material Risk Assessment? <br />
+                      What is the Conflict Zones Assessment? <br />
+                    </p>
+                  </div>
+                  <div class="squareMini">
+                    <p>Preservation</p>
+                  </div>
+                </div>
+              </div>
               <h6>
-                What if we applied this model to the MET’s collection?
+                What if we applied this model to a sample of the MET’s
+                collection?
               </h6>
             </div>
           </div>
@@ -103,23 +164,52 @@
           <div>
             <h1>Case Study: Applying the Model to the MET’s API</h1>
             <svg id="modelVizSVG"></svg>
+            <div class="sideModal" id="69.269.6a,-b">
+              <button id="close-button" onclick="closePanel()">
+                <img
+                  id="close-icon"
+                  src="images/ic_close_24px.svg"
+                  alt="close button"
+                  width="100%"
+                />
+              </button>
+              <h1>Stone Male in Parka with Harpoon</h1>
+              <div class="image-holder">
+                <img
+                  src="images/stoneMaleHarpoon.jpeg"
+                  alt="Stone Male in Parka with Harpoon"
+                  width="100%"
+                />
+              </div>
+              <div class="sideModalText">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                  nulla assumenda, cupiditate sed cumque consequuntur culpa et
+                  vel ab. Ipsa totam nam, velit dicta sed sunt voluptatem in
+                  cumque mollitia.
+                </p>
+              </div>
+            </div>
+
+            <div class="sideModal">hello2</div>
+            <div class="sideModal">hello3</div>
           </div>
         </div>
 
-        <div id="dataMethod" class="slide-hidden">
+        <div id="Conclusion" class="slide-hidden">
           <div>
-            <h1>Data Methodology</h1>
+            <h1>Takeaways</h1>
           </div>
         </div>
 
         <div id="sources" class="slide-hidden">
           <div>
-            <h1>Sources</h1>
+            <h1>Data Methodology & Sources</h1>
           </div>
         </div>
 
-        <div id="slide-previous-arrow">&lt;</div>
-        <div id="slide-next-arrow">&gt;</div>
+        <div id="slide-previous-arrow">&#8249;</div>
+        <div id="slide-next-arrow">&#8250;</div>
 
         <div class="dots-group">
           <div class="dots">
@@ -129,7 +219,7 @@
             <div class="dot dot-inactive" data-key="3" id="dot4"></div>
             <div class="dot dot-inactive" data-key="4" id="dot5"></div>
             <div class="dot dot-inactive" data-key="5" id="dot6"></div>
-            <div class="dot dot-inactive" data-key="6" id="dot7"></div>
+            <!--div class="dot dot-inactive" data-key="6" id="dot7"></div-->
           </div>
         </div>
       </div>

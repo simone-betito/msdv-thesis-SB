@@ -1,10 +1,11 @@
+//inspired by https://pudding.cool/2019/03/hype/
+
+let theID = null;
+
 d3.csv("data/DataSampleModel3.csv", function(data) {
+  //d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
   //for (var i = 0; i < data.length; i++) {}
   ///console.log(data[0]);
-
-  // data[0].score = 0;
-  // data[1].score = 2;
-  // data[2].score = 1;
 
   const levels = {
     "Overall Collection": 0,
@@ -31,43 +32,89 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
     .domain([0, 100])
     .range([margin.left, width - margin.right]);
 
+  let totalKPICounter = {
+    "Mid-Point": 0,
+    Contentious: 0,
+    "Contenders for repatriation": 0,
+    "Overall Collection": 0
+  };
+
+  // Calculate total number of each category
+  data.forEach(function(row) {
+    totalKPICounter[row.CaseTotalKPI]++;
+  });
+
+  // Remember what circle number we're currently on (for each cateogry)
+  let currentCircle = {
+    "Mid-Point": 0,
+    Contentious: 0,
+    "Contenders for repatriation": 0,
+    "Overall Collection": 0
+  };
+
   var circle = svg
     .selectAll("circle")
     .data(data)
     .enter()
-
     .append("circle")
     .attr("cx", (d, i) => {
-      return scaleX((i / data.length) * 100);
+      let currentCircleNum = currentCircle[data[i].CaseTotalKPI];
+      let totalKPIs = totalKPICounter[data[i].CaseTotalKPI];
+
+      // Spread elements equally
+      let cxPos = scaleX((currentCircleNum / (totalKPIs - 1)) * 100);
+
+      // Remember what circle number we're currently on (for each cateogry)
+      currentCircle[data[i].CaseTotalKPI]++;
+
+      return cxPos;
     })
-    // .attr("cy", (d, i) => {
-    //   let shelf = levels[d.CaseTotalKPI];
-    //   return scaleY(shelf);
-    // })
     .attr("r", 7)
     .attr("class", d => {
       return d.CaseTotalKPI;
     })
     .style("fill", "rgb(112,112,112)")
+    .attr("cy", -100)
+    .on("mouseover", d => {
+      console.log(d);
+      tooltipMain.show(
+        `<span class="label">Object Number:</span> ${d.ObjectNumber}<br>
+        <span class="label">Item Name:</span> ${d.ObjectName}<br>
+        <span class="label">Culture of Origin:</span> ${d.Culture}<br>
+        <span class="label">Classification:</span> ${d.Classification}<br>
+        <span class="label">Model Score:</span> ${d.totalKPIs}<br>
+        `
+      );
+    })
+    .on("mousemove", function(d) {
+      tooltipMain.move();
+    })
+    .on("mouseout", d => {
+      tooltipMain.hide();
+    })
+    .on("click", function(d) {
+      theID = d.ObjectNumber.replace(" ", "-");
+      //d3.select(theID).classed("show-panel", true);
+      console.log(document.getElementById(theID));
+      document.getElementById(theID).classList.add("show-panel");
+    })
+
+    //add code exit button
+    //show panel - then remove for next panel
+    //=
+
     .transition()
+    .ease(d3.easeLinear)
+    .duration((d, i) => {
+      let shelf = levels[d.CaseTotalKPI];
+      return scaleY(shelf) * 20;
+    })
     .attr("cy", (d, i) => {
       let shelf = levels[d.CaseTotalKPI];
       return scaleY(shelf);
-    }) //animate cy for downwards motion, distribute by pixels/#items/
-    //d3 spread elements equally
-    // .attr("cx", (d) => { return 100 * d.score })
-    .duration(1000);
-  svg
-    .on("mouseover", d => {
-      tooltip.show(`test`);
-    })
-    .on("mousemove", function(d) {
-      tooltip.move();
-    })
-    .on("mouseout", d => {
-      tooltip.hide();
     });
 
+  /*
   var text = svg
     .selectAll("text")
     .data(data)
@@ -86,6 +133,126 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
     })
     .attr("font-family", "adobe-devanagari")
     .attr("font-size", "17px");
+	*/
 
-  //tooltip
+  /////////////////////////////////////////////
+  // Left text labels
+  svg
+    .append("text")
+    .attr("x", 190)
+    .attr("y", scaleY(levels["Overall Collection"]) + 5)
+    .attr("text-anchor", "end")
+    .text("Overall Collection")
+    .attr("font-family", "adobe-devanagari")
+    .attr("font-size", "17px");
+
+  svg
+    .append("text")
+    .attr("x", 190)
+    .attr("y", scaleY(levels["Mid-Point"]) + 5)
+    .attr("text-anchor", "end")
+    .text("Mid-Point")
+    .attr("font-family", "adobe-devanagari")
+    .attr("font-size", "17px");
+
+  svg
+    .append("text")
+    .attr("x", 190)
+    .attr("y", scaleY(levels["Contentious"]) + 5)
+    .attr("text-anchor", "end")
+    .text("Contentious")
+    .attr("font-family", "adobe-devanagari")
+    .attr("font-size", "17px");
+
+  svg
+    .append("text")
+    .attr("x", 190)
+    .attr("y", scaleY(levels["Contenders for repatriation"]) + 5)
+    .attr("text-anchor", "end")
+    .text("Contenders for repatriation")
+    .attr("font-family", "adobe-devanagari")
+    .attr("font-size", "17px");
+  /////////////////////////////////////////////
+
+  /////////////////////////////////////////////
+  // Right text labels
+  svg
+    .append("text")
+    .attr("x", width)
+    .attr("y", scaleY(levels["Overall Collection"]) + 5)
+    .attr("text-anchor", "end")
+    .text("100%")
+    .attr("font-family", "adobe-devanagari")
+    .attr("font-size", "17px");
+
+  svg
+    .append("text")
+    .attr("x", width)
+    .attr("y", scaleY(levels["Mid-Point"]) + 5)
+    .attr("text-anchor", "end")
+    .text("8%")
+    .attr("font-family", "adobe-devanagari")
+    .attr("font-size", "17px");
+
+  svg
+    .append("text")
+    .attr("x", width)
+    .attr("y", scaleY(levels["Contentious"]) + 5)
+    .attr("text-anchor", "end")
+    .text("2%")
+    .attr("font-family", "adobe-devanagari")
+    .attr("font-size", "17px");
+
+  svg
+    .append("text")
+    .attr("x", width)
+    .attr("y", scaleY(levels["Contenders for repatriation"]) + 5)
+    .attr("text-anchor", "end")
+    .text("0.4%")
+    .attr("font-family", "adobe-devanagari")
+    .attr("font-size", "17px");
+
+  /////////////////////////////////////////////
+
+  // tooltip method
+  var tooltipMain = {
+    element: null,
+    init: function() {
+      this.element = d3
+        .select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+    },
+    show: function(t) {
+      this.element
+        .html(t)
+        .transition()
+        .duration(200)
+        .style("left", d3.event.pageX + 20 + "px")
+        .style("top", d3.event.pageY - 20 + "px")
+        .style("opacity", 0.4);
+    },
+    move: function() {
+      this.element
+        .transition()
+        .duration(30)
+        .style("left", d3.event.pageX + 20 + "px")
+        .style("top", d3.event.pageY - 20 + "px")
+        .style("opacity", 0.9);
+    },
+    hide: function() {
+      this.element
+        .transition()
+        .duration(500)
+        .style("opacity", 0);
+    }
+  };
+
+  tooltipMain.init();
 });
+
+function closePanel() {
+  document.getElementById(theID).classList.remove("show-panel");
+  document.getElementById(theID).classList.add("hide-panel");
+}

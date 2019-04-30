@@ -34,7 +34,8 @@ d3.queue()
     d3.json,
     "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"
   ) // World shape
-  .defer(d3.csv, "data/ListofRepatriatedItems.csv") // Position of circles
+  //.defer(d3.csv, "data/ListofRepatriatedItems.csv") // Position of circles
+	.defer(d3.csv, "https://gavamedia.com/TEMP/ListofRepatriatedItems.csv") // Position of circles
   .await(ready);
 
 function ready(error, dataGeo, data) {
