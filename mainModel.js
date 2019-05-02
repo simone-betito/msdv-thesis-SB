@@ -3,7 +3,7 @@
 let theID = null;
 
 d3.csv("data/DataSampleModel3.csv", function(data) {
-  //d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
+//d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
   //for (var i = 0; i < data.length; i++) {}
   ///console.log(data[0]);
 
@@ -66,14 +66,14 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
 
       // Remember what circle number we're currently on (for each cateogry)
       currentCircle[data[i].CaseTotalKPI]++;
-
+			
       return cxPos;
     })
     .attr("r", 7)
     .attr("class", d => {
-      return d.CaseTotalKPI;
+      return d.CaseTotalKPI.replace(/ /g, "_") + " c" + d.ObjectNumber.replace(/[\.\, ]/g, "_").replace(/__+/g, '_');
     })
-    .style("fill", "rgb(112,112,112)")
+    //.style("fill", "rgb(112,112,112)")
     .attr("cy", -100)
     .on("mouseover", d => {
       console.log(d);

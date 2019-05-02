@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-color: #fbfbf2;
+  background-color: #f1f2f4;
 }
 
 .h1 {
@@ -35,6 +35,12 @@ p {
   align-items: center;
 } */
 
+a {
+  font-size: inherit;
+  color: white;
+  padding: 10px;
+}
+
 #home {
   /* display: flex; */
   /* height: 100vh; */
@@ -45,7 +51,7 @@ p {
   background-image: url("images/rendered3.jpg");
   background-repeat: repeat-x;
   background-size: contain;
-  opacity: 0.75;
+  opacity: 0.9;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
@@ -68,15 +74,10 @@ p {
 .directives-font {
   font-family: "Inconsolata", monospace;
 }
-/* 
-#model {
-  /* background-image: url("images/rendered3.jpg");
-  background-repeat: repeat-x;
-  background-size: contain;
-  opacity: 0.75; */
-/* } */
 
+/*******************************/
 /* slides */
+
 #slides {
   text-align: center;
 }
@@ -180,7 +181,9 @@ p {
   transition: all 0.15s ease-in;
 }
 
+/*******************************/
 /* modal box */
+
 #modal-box {
   position: fixed;
   width: 100vw;
@@ -234,7 +237,9 @@ p {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+/*******************************/
 /* map */
+
 #map {
   margin-top: 100px;
 }
@@ -311,21 +316,96 @@ path:hover {
   display: grid;
   padding: 10rem;
   margin: 0 auto;
-  grid-row-gap: 2rem;
+  grid-row-gap: 3rem;
   grid-column-gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
 }
-.square {
-  display: flex;
-  align-items: flex-end;
+
+/*******************************/
+.squareMain div {
+  position: relative;
 }
-.rename-me {
+
+/* Everthing that's not an image in squareMain */
+.squareMain div :not(img) {
+  position: absolute;
+  cursor: default;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+  top: 15%;
+  width: calc(100% + 40px);
+  z-index: 1;
+  font-size: 13px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: light;
+  padding: 10px 10px 10px 10px;
+}
+
+.squareMain div:hover img {
+  filter: blur(2px) brightness(60%);
+  box-shadow: 0 0 16px #ad8f44;
+}
+.squareMain div:hover :not(img) {
+  opacity: 1;
+}
+/*******************************/
+
+.symbolism-background-art {
+  border: solid 10px #ad8f44;
+  padding: 10px;
+  /* justify-self: center; */
+  font-size: 10px;
+  /* background-color: white; */
+  margin-right: 12px;
+  /* background-image: url("images/symbolicKPI2.jpg"); */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top left;
+  width: 100%;
+  margin: 0 auto;
+}
+.legality-background-art {
   border: solid 10px #ad8f44;
   padding: 10px;
   justify-self: center;
-  font-size: 12px;
-  background-color: white;
+  font-size: 10px;
+  /* background-color: white; */
   margin-right: 12px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top left;
+  width: 100%;
+  margin: 0 auto;
+}
+.morality-background-art {
+  border: solid 10px #ad8f44;
+  padding: 10px;
+  justify-self: center;
+  font-size: 10px;
+  /* background-color: white; */
+  margin-right: 12px;
+  /* background-image: url("images/moralityKPI.jpg"); */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top left;
+  width: 100%;
+  margin: 0 auto;
+}
+.preservation-background-art {
+  border: solid 10px #ad8f44;
+  padding: 10px;
+  justify-self: center;
+  font-size: 10px;
+  /* background-color: white; */
+  margin-right: 12px;
+  /* background-image: url("images/preservationKPI.jpeg"); */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top left;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .squareMini {
@@ -333,13 +413,15 @@ path:hover {
   background-color: white;
   box-shadow: 2px 5px #707070;
   height: 100px;
-  width: 85px;
+  width: 89px;
   font-size: 13px;
+  color: black;
 }
-
+/*******************************/
 /* model */
 circle {
-  stroke: #000;
+  stroke: white;
+  stroke-width: 0.1;
   opacity: 0.75;
 }
 
@@ -364,6 +446,7 @@ circle {
 
 .sideModalText {
   text-align: left;
+  font-size: 13px;
 }
 
 .image-holder {
@@ -389,4 +472,22 @@ circle {
 
 #close-icon {
   max-width: 12px;
+}
+
+.Overall_Collection,
+.Mid-Point,
+.Contentious,
+.Contenders_for_repatriation {
+  fill: rgb(112, 112, 112);
+}
+
+.c69_269_6a_b {
+  fill: rgb(112, 112, 112);
+  stroke: black;
+  stroke-width: 5px;
+}
+
+.c69_269_6a_b:hover {
+  fill: #b16e6e;
+  stroke: #b16e6e;
 }
