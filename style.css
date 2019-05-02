@@ -324,11 +324,12 @@ path:hover {
 /*******************************/
 .squareMain div {
   position: relative;
+	height: fit-content;
 	height:intrinsic;
 }
 
 /* Everthing that's not an image in squareMain */
-.squareMain div :not(img,p) {
+.squareMain div :not(img):not(p) {
   position: absolute;
   cursor: default;
   text-align: center;
@@ -337,12 +338,12 @@ path:hover {
   opacity: 0;
   transition: 0.5s;
   top: 15%;
-  width: calc(100% + 40px);
+  width: 100%;
   z-index: 1;
   font-size: 13px;
   font-family: "IBM Plex Sans", sans-serif;
   font-style: light;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 20px 10px 20px;
 }
 
 .squareMain div:hover img {
