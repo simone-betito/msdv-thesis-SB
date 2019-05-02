@@ -324,8 +324,8 @@ path:hover {
 /*******************************/
 .squareMain div {
   position: relative;
-	height: fit-content;
-	height:intrinsic;
+  height: fit-content;
+  height: intrinsic;
 }
 
 /* Everthing that's not an image in squareMain */
@@ -334,7 +334,7 @@ path:hover {
   cursor: default;
   text-align: center;
   color: #fff;
-	text-shadow:0 0 3px #000;
+  text-shadow: 0 0 3px #000;
   opacity: 0;
   transition: 0.5s;
   top: 15%;
