@@ -324,14 +324,16 @@ path:hover {
 /*******************************/
 .squareMain div {
   position: relative;
+	height:intrinsic;
 }
 
 /* Everthing that's not an image in squareMain */
-.squareMain div :not(img) {
+.squareMain div :not(img,p) {
   position: absolute;
   cursor: default;
   text-align: center;
   color: #fff;
+	text-shadow:0 0 3px #000;
   opacity: 0;
   transition: 0.5s;
   top: 15%;
