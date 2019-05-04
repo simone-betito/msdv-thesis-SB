@@ -46,7 +46,7 @@
           <section id="modal-box">
             <div id="dialogue">
               <div id="modal-content">
-                <h3>About Repatriation & Why It's Important</h3>
+                <h3>About Repatriation &amp; Why It's Important</h3>
                 <p>
                   Restitution is defined by Merriam Webster as “the restoration
                   of something to its rightful owner.” Many authors have
@@ -99,15 +99,19 @@
         </div>
 
         <div id="model" class="slide-hidden">
-          <div>
-            <h1>Model Methodology</h1>
-            <h4>Insert Something Here</h4>
-            <h6 class="modelExplainerText1">
-              Hover over the images to see what questions were asked in order to
-              build the model
-            </h6>
-            <div>
-              <div class="squareMain">
+          <h1>Model Methodology</h1>
+          <h4>Insert Something Here</h4>
+          <h6 class="modelExplainerText1">
+            Hover over the images to see what questions were asked in order to
+            build the model
+          </h6>
+
+          <!----------------------------------------->
+          <!-- NEW WAY -->
+
+          <table>
+            <tr>
+              <td>
                 <div class="Symbolism-square">
                   <span>
                     Does the item represent a religious symbol?
@@ -124,6 +128,8 @@
                 <div class="squareMini">
                   <p>Symbolism</p>
                 </div>
+              </td>
+              <td>
                 <div class="legality-square">
                   <span
                     >Was the item taken in a consensual manner?
@@ -139,6 +145,8 @@
                 <div class="squareMini">
                   <p>Legality</p>
                 </div>
+              </td>
+              <td>
                 <div class="preservation-square">
                   <span
                     >Will the item be preserved?<br />
@@ -154,6 +162,8 @@
                 <div class="squareMini">
                   <p>Preservation</p>
                 </div>
+              </td>
+              <td>
                 <div class="morality-square">
                   <span
                     >Is there a power imbalance between the requestor and the
@@ -169,13 +179,83 @@
                 <div class="squareMini">
                   <p>Morality</p>
                 </div>
+              </td>
+            </tr>
+          </table>
+
+          <!----------------------------------------->
+
+          <!----------------------------------------->
+          <!-- OLD WAY -->
+          <!-- <div>
+            <div class="squareMain">
+              <div class="Symbolism-square">
+                <span>
+                  Does the item represent a religious symbol?
+                  <br />
+                  Symbolic Value? <br />
+                  Group Value? <br />
+                  Importance to national or community pride?</span
+                >
+                <img
+                  class="symbolism-background-art"
+                  src="images/symbolicKPI2.jpg"
+                />
               </div>
-              <h6 class="modelExplainerText2">
-                What if we applied this model to a sample of the MET’s
-                collection?
-              </h6>
-            </div>
+              <div class="squareMini">
+                <p>Symbolism</p>
+              </div>
+              <div class="legality-square">
+                <span
+                  >Was the item taken in a consensual manner?
+                  <br />
+                  Was the art acquired during looting? <br />
+                  Is the ownership the result of imperialism? <br
+                /></span>
+                <img
+                  class="legality-background-art"
+                  src="images/legalityKPI.jpg"
+                />
+              </div>
+              <div class="squareMini">
+                <p>Legality</p>
+              </div>
+              <div class="preservation-square">
+                <span
+                  >Will the item be preserved?<br />
+                  Is the item reproducible? <br />
+                  What is the Material Risk Assessment? <br />
+                  What is the Conflict Zones Assessment? <br
+                /></span>
+                <img
+                  class="preservation-background-art"
+                  src="images/preservationKPI.jpeg"
+                />
+              </div>
+              <div class="squareMini">
+                <p>Preservation</p>
+              </div>
+              <div class="morality-square">
+                <span
+                  >Is there a power imbalance between the requestor and the
+                  requestee?<br />
+                  What is the argument from the court of public opinion?<br />
+                  Is it part of the public's discussions?</span
+                >
+                <img
+                  class="morality-background-art"
+                  src="images/moralityKPI.jpg"
+                />
+              </div>
+              <div class="squareMini">
+                <p>Morality</p>
+              </div> -->
+            <!-- </div> -->
+            <h6 class="modelExplainerText2">
+              What if we applied this model to a sample of the MET’s collection?
+            </h6>
           </div>
+          <!----------------------------------------->
         </div>
 
         <div id="modelViz" class="slide-hidden">
@@ -237,15 +317,52 @@
             <h1>Data Methodology & Sources</h1>
             <div>
               <h4>How the Symbolism metric is calculated</h4>
+              <p>
+                For this model, the Symbolism metric was calculated by giving
+                any object name within the "Object Column" of the dataset with
+                any reference to funerary, marriage, armour/war or cermonial
+                artifacts were binary scored.
+              </p>
             </div>
             <div>
               <h4>How the Legality metric is calculated</h4>
+              <p>
+                The legality metric was calculated by scoring an item that had a
+                culture identified as "peoples" or a historically marginalized
+                community was binary scored.
+              </p>
             </div>
             <div>
               <h4>How the Preservation metric is calculated</h4>
+              <p>
+                The preservation metric was calculated in two parts, the
+                materiality score and the risk assessment score. The materiality
+                portion was calculated by assessing the strength of the material
+                of the artifact. Materiality scale (delicate to strong): Clay =
+                1 Wood = 2 Ivory & Bone = 3 Stone = 4 Metals = 5. The stronger
+                the material, the easier the artifact would be to return without
+                damage.
+                <br />
+                The risk assessment score was calculated from a official Peace
+                Index Scale, per their regional scale from most unsafe region to
+                safest region. Regional scoring: Europe = 1 North America = 2
+                Asia-Pacific = 3 South America = 4 Central America & caribbean =
+                5 Sub-Saharan Africa = 6 Russia & Eurasia = 7 South Asia = 8
+                Middle East & North Africa = 9 <br />
+                The safer the region, the easier it would be to return an item.
+              </p>
             </div>
             <div>
               <h4>How the Morality metric is calculated</h4>
+              <p>
+                Morality refers to the opinion of the general public on the item
+                in question by looking at Google Searches over a period of time.
+                This way we can assess if an item is top of mind for the region
+                and part of the overall public's discussions. If the Google
+                search shows a higher search rate (>1000), then the item is
+                given a score of 1, if not, it is scored as 0. However, in this
+                particular model, the Morality metric was not applied.
+              </p>
             </div>
           </div>
         </div>

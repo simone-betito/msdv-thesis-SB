@@ -52,8 +52,12 @@ d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
     "Overall Collection": 0
   };
 
-  var circle = svg
-    .selectAll("circle")
+  // console.log(d3.select("#modelViz").attr("class"));
+
+  // if (d3.select("#modelViz").attr("class") == "slide-visible") {
+  // console.log("hey");
+  var circles = svg
+    .selectAll("circles")
     .data(data)
     .enter()
     .append("circle")
@@ -103,10 +107,9 @@ d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
       document.getElementById(theID).classList.add("show-panel");
     })
 
-    //add code exit button
-    //show panel - then remove for next panel
-    //=
-
+    // if (d3.select("#modelVizSVG").attr("class") === "slide-hidden") {
+    //   console.log(this);
+    // d3.selectAll(circles)
     .transition()
     .ease(d3.easeLinear)
     .duration((d, i) => {
@@ -117,7 +120,7 @@ d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
       let shelf = levels[d.CaseTotalKPI];
       return scaleY(shelf);
     });
-
+  // }
   /*
   var text = svg
     .selectAll("text")

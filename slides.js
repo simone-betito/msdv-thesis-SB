@@ -13,6 +13,10 @@ function refreshSlides(slides, dots) {
       slides[i].className = "slide-hidden";
     }
   }
+
+  // Maybe call function, if function "showingSlide_x" exists
+  if (typeof window["showingSlide_" + selectedSlideNum] === "function")
+    window["showingSlide_" + selectedSlideNum]();
 }
 
 function showNextSlide() {
