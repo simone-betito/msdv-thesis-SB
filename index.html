@@ -79,6 +79,8 @@
                   Note: Restitution and repatriation will be used
                   interchangeably throughout this visualization.
                 </h6>
+
+                <br>
               </div>
               <button id="lets-go" onclick="toggleModal()">Let's Go</button>
             </div>
@@ -256,8 +258,6 @@
             </h6>
           </div>
           <!----------------------------------------->
-        </div>
-
         <div id="modelViz" class="slide-hidden">
           <div>
             <h1>
@@ -283,7 +283,7 @@
               </div>
               <div class="sideModalText">
                 <p>
-                  This artifact had a cumulative score of 15. <br />
+                  This artifact has a cumulative score of 15. <br />
                   <br />
                   The repatriation model likely picked up on this item because
                   it meets the Preservation KPI's material assessment as a stone
@@ -301,59 +301,117 @@
               </div>
             </div>
 
-            <div class="sideModal">hello2</div>
-            <div class="sideModal">hello3</div>
+            <div class="sideModal" id="L.2017.25.3">
+                <button id="close-button" onclick="closePanel()">
+                    <img
+                      id="close-icon"
+                      src="images/ic_close_24px.svg"
+                      alt="close button"
+                      width="100%"
+                    />
+                  </button>
+                  <h1>Shaman's Mask</h1>
+                  <div class="image-holder">
+                    <img
+                      src="images/shamansMask.jpeg"
+                      alt="Shaman's Mask"
+                      width="100%"
+                    />
+                  </div>
+                  <div class="sideModalText">
+                    <p>
+                      This artifact has a cumulative score of __. <br />
+                      The repatriation model considered this item to be contentious. Likely because it's an item from an Tlingit indigenous people and for this symbolic meaning. The description on the MET's site describes this item as: "This malevolent mask manifests a powerful spirit being that helped a shaman mediate between the worlds of matter and spirit".
+                      <br />
+                    </p>
+                    <a
+                      href="https://www.metmuseum.org/art/collection/search/726654?&searchField=All&sortBy=Relevance&ft=Unrecorded+Tlingit+artist&offset=0&rpp=20&amp;pos=1"
+                      >source</a
+                    >
+                  </div>
+            </div>
+            <div class="sideModal" id="83.2.392">
+                <button id="close-button" onclick="closePanel()">
+                    <img
+                      id="close-icon"
+                      src="images/ic_close_24px.svg"
+                      alt="close button"
+                      width="100%"
+                    />
+                  </button>
+                  <h1>Medal of Captain Stephen Decatur, 1800–1830</h1>
+                  <div class="image-holder">
+                    <img
+                      src="images/medal.jpg"
+                      alt="medal"
+                      width="100%"
+                    />
+                  </div>
+                  <div class="sideModalText">
+                    <p>
+                      This artifact has a cumulative score of __. <br />
+                      <br />
+                      The model picked up on a few American items, which makes sense considering how the metrics were combined. Items in North America scored higher. Not everything is required to be repatriated if the item makes sense in its current location.
+                    </p>
+                    <a
+                      href="https://www.metmuseum.org/art/collection/search/5066"
+                      >source</a
+                    >
+                  </div>
+            </div>
           </div>
         </div>
 
         <div id="Conclusion" class="slide-hidden">
           <div>
             <h1>Takeaways</h1>
+            <p>
+              The model was a success in terms of what it picked out and for its ability to be a conversation starter. 
+            </p>
           </div>
         </div>
 
         <div id="sources" class="slide-hidden">
           <div>
             <h1>Data Methodology & Sources</h1>
-            <div>
-              <h4>How the Symbolism metric is calculated</h4>
+            <div id="methodExplainer">
+              <h4>How the Symbolism metric is calculated:</h4>
               <p>
-                For this model, the Symbolism metric was calculated by giving
-                any object name within the "Object Column" of the dataset with
-                any reference to funerary, marriage, armour/war or cermonial
-                artifacts were binary scored.
+                For this model, the Symbolism metric was calculated by binary scoring
+                any object name within the "Object Column" of the dataset that had
+                any reference to funerary, marriage, armour/war or ceremonial meaning.
               </p>
             </div>
-            <div>
-              <h4>How the Legality metric is calculated</h4>
+            <div id="methodExplainer">
+              <h4>How the Legality metric is calculated:</h4>
               <p>
-                The legality metric was calculated by scoring an item that had a
+                The legality metric was calculated by scoring any item within the "Culture" column in the sample that had a
                 culture identified as "peoples" or a historically marginalized
-                community was binary scored.
+                community as 1 while the rest of the items were scored as 0.
               </p>
             </div>
-            <div>
-              <h4>How the Preservation metric is calculated</h4>
+            <div id="methodExplainer">
+              <h4>How the Preservation metric is calculated:</h4>
               <p>
-                The preservation metric was calculated in two parts, the
+                The preservation metric is a combination of two parts, the
                 materiality score and the risk assessment score. The materiality
                 portion was calculated by assessing the strength of the material
-                of the artifact. Materiality scale (delicate to strong): Clay =
+                of the artifact. Materiality scale: Clay =
                 1 Wood = 2 Ivory & Bone = 3 Stone = 4 Metals = 5. The stronger
                 the material, the easier the artifact would be to return without
-                damage.
+                damage from transport or the elements.
                 <br />
-                The risk assessment score was calculated from a official Peace
-                Index Scale, per their regional scale from most unsafe region to
-                safest region. Regional scoring: Europe = 1 North America = 2
+                The risk assessment score was calculated from the official Peace
+                Index Scale, honing in on their regional scale from most safe region to
+                unsafest region. Regional scoring: Europe = 1 North America = 2
                 Asia-Pacific = 3 South America = 4 Central America & caribbean =
                 5 Sub-Saharan Africa = 6 Russia & Eurasia = 7 South Asia = 8
                 Middle East & North Africa = 9 <br />
-                The safer the region, the easier it would be to return an item.
+                The safer the region, the less risk of damage to the artifact. 
               </p>
             </div>
-            <div>
-              <h4>How the Morality metric is calculated</h4>
+            <div id="methodExplainer">
+              <h4>How the Morality metric is calculated:</h4>
               <p>
                 Morality refers to the opinion of the general public on the item
                 in question by looking at Google Searches over a period of time.
@@ -361,12 +419,12 @@
                 and part of the overall public's discussions. If the Google
                 search shows a higher search rate (>1000), then the item is
                 given a score of 1, if not, it is scored as 0. However, in this
-                particular model, the Morality metric was not applied.
+                particular model, the Morality metric was not applied. This metric can always be applied if deemed appropriate for the situation to provide further context.
               </p>
             </div>
           </div>
         </div>
-
+      </div>
         <div id="slide-previous-arrow">&#8249;</div>
         <div id="slide-next-arrow">&#8250;</div>
 
