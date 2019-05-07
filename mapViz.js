@@ -2,8 +2,8 @@
 // let height = window.innerHeight;
 
 var chart = d3.select("#svg-map");
-var width = 900;
-var height = 500;
+var width = window.innerWidth;
+var height = window.innerHeight;
 var aspect = width / height;
 
 d3.select(window).on("resize", function() {
@@ -22,7 +22,7 @@ var svg = d3
 // Map and projection
 var projection = d3
   .geoMercator()
-  .scale([width / 5.5]) //observablehq D3 mercator
+  .scale([width / 6]) //observablehq D3 mercator
   .translate([width / 2, height / 1.4]);
 
 // A path generator
@@ -34,8 +34,8 @@ d3.queue()
     d3.json,
     "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"
   ) // World shape
-  //.defer(d3.csv, "data/ListofRepatriatedItems.csv") // Position of circles
-  .defer(d3.csv, "https://gavamedia.com/TEMP/ListofRepatriatedItems.csv") // Position of circles
+  .defer(d3.csv, "data/ListofRepatriatedItems.csv") // Position of circles
+  //.defer(d3.csv, "https://gavamedia.com/TEMP/ListofRepatriatedItems.csv") // Position of circles
   .await(ready);
 
 function ready(error, dataGeo, data) {

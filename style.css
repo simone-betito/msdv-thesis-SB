@@ -25,6 +25,11 @@ h6 {
   text-align: right;
 }
 
+h5 span {
+  color: #b16e6e;
+  /* style later */
+}
+
 h7 {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 12px;
@@ -200,6 +205,7 @@ a {
   height: 100vh;
   /* transform: translate(-50%, -50%); */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 999;
 }
 
 #screen {
@@ -262,6 +268,14 @@ a {
 #svg-map h1 {
   /* margin-top: 100px; */
   padding-top: 5rem;
+  position: relative;
+  z-index: 999;
+}
+
+#svg-map svg {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .tooltip {
@@ -293,6 +307,8 @@ path:hover {
   stroke-width: 2;
   stroke-opacity: 0.7;
   animation: repatriated 10s;
+  position: relative;
+  z-index: 999;
 }
 
 .not-rep {
@@ -306,17 +322,23 @@ path:hover {
   width: 2em;
   border: dotted 2px #b16e6e;
   margin: 0 0.5em 0.125em 0;
+  position: relative;
+  z-index: 999;
 }
 
-/* .legend-repatriated span p {
+#svg-map p {
   font-size: 10px;
-} */
+  position: relative;
+  z-index: 999;
+}
 
 .legend-not-repatriated span {
   display: inline-block;
   width: 2em;
   border: solid 2px #707070;
   margin: 0 0.5em 0.125em 2em;
+  position: relative;
+  z-index: 999;
 }
 
 .tooltip img {
@@ -579,6 +601,28 @@ circle {
 }
 
 .c69_269_6a_b:hover {
+  fill: #b16e6e;
+  stroke: #b16e6e;
+}
+
+.c83_2_392 {
+  fill: rgb(112, 112, 112);
+  stroke: black;
+  stroke-width: 5px;
+}
+
+.c83_2_392:hover {
+  fill: #b16e6e;
+  stroke: #b16e6e;
+}
+
+.cL_2017_54_3 {
+  fill: rgb(112, 112, 112);
+  stroke: black;
+  stroke-width: 5px;
+}
+
+.cL_2017_54_3 {
   fill: #b16e6e;
   stroke: #b16e6e;
 }

@@ -63,6 +63,9 @@ function initialize() {
   slidePreviousElm.addEventListener("click", showPreviousSlide);
   slideNextElm.addEventListener("click", showNextSlide);
 
+  let startArrowElm = document.getElementById("startArrow");
+  startArrowElm.addEventListener("click", showNextSlide);
+
   [...dotGroup].forEach(dot => {
     dot.addEventListener("click", i => {
       selectedSlideNum = i.srcElement.dataset.key;

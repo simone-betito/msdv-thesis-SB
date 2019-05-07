@@ -101,7 +101,15 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
       tooltipMain.hide();
     })
     .on("click", function(d) {
+      let lookup = document.querySelector(".show-panel");
+      if (lookup) {
+        lookup.classList.remove("show-panel");
+        lookup.classList.add("hide-panel");
+      }
+
       theID = d.ObjectNumber.replace(" ", "-");
+      //document.getElementById(theID).classList.remove("show-panel");
+      //document.getElementById(theID).classList.add("hide-panel");
       //d3.select(theID).classed("show-panel", true);
       console.log(document.getElementById(theID));
       document.getElementById(theID).classList.add("show-panel");
@@ -183,6 +191,16 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
 
   /////////////////////////////////////////////
   // Right text labels
+
+  svg
+    .append("text")
+    .attr("x", width)
+    .attr("y", 20)
+    .attr("text-anchor", "end")
+    .text("DESCRIP")
+    .attr("font-family", "adobe-devanagari")
+    .attr("font-size", "17px");
+
   svg
     .append("text")
     .attr("x", width)
