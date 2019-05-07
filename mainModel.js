@@ -2,8 +2,8 @@
 
 let theID = null;
 
-d3.csv("data/DataSampleModel3.csv", function(data) {
-  //d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
+//d3.csv("data/DataSampleModel3.csv", function(data) {
+d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
   //for (var i = 0; i < data.length; i++) {}
   ///console.log(data[0]);
 
@@ -197,9 +197,9 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
     .attr("x", width)
     .attr("y", 20)
     .attr("text-anchor", "end")
-    .text("DESCRIP")
+    .text("% of Collection")
     .attr("font-family", "adobe-devanagari")
-    .attr("font-size", "17px");
+    .attr("font-size", "15px");
 
   svg
     .append("text")
