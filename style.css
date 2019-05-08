@@ -38,8 +38,8 @@ a {
   padding: 10px;
 }
 
-span .u {
-  border-bottom: 3px #b16e6e;
+span.u {
+  border-bottom: solid 3px #b16e6e;
 }
 
 #home {
