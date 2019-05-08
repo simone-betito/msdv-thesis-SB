@@ -46,8 +46,6 @@ a {
 }
 
 #home {
-  /* display: flex; */
-  /* height: 100vh; */
   position: absolute;
   top: 0;
   width: 100vw;
@@ -56,11 +54,14 @@ a {
   background-repeat: repeat-x;
   background-size: contain;
   opacity: 0.9;
-  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+
+#home h5 {
+  font-size: 16px;
 }
 
 #home h6 {
-  font-size: 14px;
+  font-size: 17px;
 }
 
 #title {
@@ -233,10 +234,11 @@ a {
 
 #modal-content h3 {
   text-align: left;
+  font-size: 20px;
 }
 
 #modal-content p {
-  font-size: 13px;
+  font-size: 17px;
 }
 
 #lets-go {
@@ -326,7 +328,7 @@ path:hover {
 }
 
 #svg-map p {
-  font-size: 10px;
+  font-size: 13px;
   position: relative;
   z-index: 9;
 }
@@ -357,7 +359,28 @@ path:hover {
   }
 }
 
-/* model explainer slide */
+/* model explainer slide 1 */
+
+#modelExplainer {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-image: url("images/rendered3.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  opacity: 0.9;
+}
+
+.modelExplainerText0 {
+  position: fixed;
+  right: 10vw;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+/* model explainer slide 2 */
 
 .squareMain {
   display: grid;
@@ -555,7 +578,7 @@ circle {
 
 .sideModalText {
   text-align: left;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .image-holder {
@@ -629,4 +652,20 @@ circle {
   font-size: 13px;
   padding: 25px 50px;
   text-align: left;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#methodExplainer {
+  right: 10vw;
 }

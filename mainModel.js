@@ -198,7 +198,7 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
     .attr("y", 20)
     .attr("text-anchor", "end")
     .text("% of Collection")
-    .attr("font-family", "adobe-devanagari")
+    .attr("font-family", "courier-prime", "monospace")
     .attr("font-size", "15px");
 
   svg
@@ -207,7 +207,7 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
     .attr("y", scaleY(levels["Overall Collection"]) + 5)
     .attr("text-anchor", "end")
     .text("100%")
-    .attr("font-family", "adobe-devanagari")
+    .attr("font-family", "courier-prime", "monospace")
     .attr("font-size", "17px");
 
   svg
@@ -216,7 +216,7 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
     .attr("y", scaleY(levels["Mid-Point"]) + 5)
     .attr("text-anchor", "end")
     .text("8%")
-    .attr("font-family", "adobe-devanagari")
+    .attr("font-family", "courier-prime", "monospace")
     .attr("font-size", "17px");
 
   svg
@@ -225,7 +225,7 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
     .attr("y", scaleY(levels["Contentious"]) + 5)
     .attr("text-anchor", "end")
     .text("2%")
-    .attr("font-family", "adobe-devanagari")
+    .attr("font-family", "courier-prime", "monospace")
     .attr("font-size", "17px");
 
   svg
@@ -234,7 +234,7 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
     .attr("y", scaleY(levels["Contenders for repatriation"]) + 5)
     .attr("text-anchor", "end")
     .text("0.4%")
-    .attr("font-family", "adobe-devanagari")
+    .attr("font-family", "courier-prime", "monospace")
     .attr("font-size", "17px");
 
   /////////////////////////////////////////////
