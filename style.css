@@ -60,6 +60,7 @@ span.u {
 
 #home h6 {
   font-size: 17px;
+  color: black;
 }
 
 #title {
@@ -80,6 +81,14 @@ span.u {
 
 .directives-font {
   font-family: "courier-prime", monospace;
+}
+
+ul {
+  text-align: left;
+}
+
+ul a {
+  color: #b16e6e;
 }
 
 /*******************************/
@@ -412,6 +421,7 @@ path:hover {
 
 .modelExplainerText1 {
   text-align: center;
+  display: inline-block;
 }
 
 /*******************************/
@@ -550,6 +560,7 @@ path:hover {
 .modelExplainerText2 {
   padding-bottom: 60px;
   padding-right: 80px;
+  display: inline-block;
   /* left: 30%;
   position: fixed;
   bottom: 80px; */
@@ -557,6 +568,11 @@ path:hover {
 
 /*******************************/
 /* model */
+
+#modelViz2 h6 {
+  text-align: center;
+}
+
 circle {
   stroke: white;
   stroke-width: 0.1;
@@ -620,9 +636,9 @@ circle {
 }
 
 .c69_269_6a_b {
-  fill: rgb(112, 112, 112);
+  fill: black;
   stroke: black;
-  stroke-width: 8px;
+  stroke-width: 11px;
 }
 
 .c69_269_6a_b:hover {
@@ -631,9 +647,9 @@ circle {
 }
 
 .c83_2_392 {
-  fill: rgb(112, 112, 112);
+  fill: black;
   stroke: black;
-  stroke-width: 8px;
+  stroke-width: 11px;
 }
 
 .c83_2_392:hover {
@@ -642,12 +658,12 @@ circle {
 }
 
 .cL_2017_54_3 {
-  fill: rgb(112, 112, 112);
+  fill: black;
   stroke: black;
-  stroke-width: 8px;
+  stroke-width: 11px;
 }
 
-.cl_2017_54_3:hover {
+.cL_2017_54_3:hover {
   fill: #b16e6e;
   stroke: #b16e6e;
 }
@@ -676,17 +692,24 @@ circle {
   right: 10vw;
 }
 
+#dataMethod4 {
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* **********CONCLUSION***** */
 
 #conclusion p {
-  padding: 10px;
   font-style: 400;
   width: 60%;
   text-align: left;
   margin: 0 auto;
-  padding: 100px;
+  padding: 50px;
   font-size: 17px;
 }
 
 #conclusion h1 {
+  margin-top: 3em;
 }
+
+/* **********CONCLUSION***** */
