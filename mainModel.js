@@ -2,8 +2,8 @@
 
 let theID = null;
 
-d3.csv("data/DataSampleModel3.csv", function(data) {
-  // d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
+//d3.csv("data/DataSampleModel3.csv", function(data) {
+d3.csv("https://gavamedia.com/TEMP/DataSampleModel4.csv", function(data) {
   //for (var i = 0; i < data.length; i++) {}
   ///console.log(data[0]);
 
@@ -126,7 +126,12 @@ d3.csv("data/DataSampleModel3.csv", function(data) {
     })
     .attr("cy", (d, i) => {
       let shelf = levels[d.CaseTotalKPI];
-      return scaleY(shelf);
+      let newY = scaleY(shelf);
+
+      if (d.CaseTotalKPI === "Overall Collection")
+        newY = scaleY(shelf) - 4 + 10 * Math.random();
+
+      return newY;
     });
   // }
   /*

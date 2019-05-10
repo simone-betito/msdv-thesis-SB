@@ -569,6 +569,7 @@ path:hover {
   padding-bottom: 60px;
   padding-right: 80px;
   display: inline-block;
+  text-align: center;
   /* left: 30%;
   position: fixed;
   bottom: 80px; */
@@ -587,10 +588,14 @@ circle {
   opacity: 0.75;
 }
 
+/* .circle:hover {
+	r: 20;
+} */
+
 .legend {
   position: absolute;
   width: 5em;
-  left: 3em;
+  left: 4em;
   top: 25%;
 }
 
