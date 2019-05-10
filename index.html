@@ -100,7 +100,7 @@
           </section>
           <div id="svg-map">
             <h1>Artifact Movement Around The World</h1>
-            <h3>Mapping Global Restitution Cases</h3>
+            <h3>Case Studies: Mapping Global Restitution Cases</h3>
 
             <!-- LEGEND -->
             <p>
@@ -208,6 +208,7 @@
               Case Study: Applying The Repatriation Model to A Sample of the MET's Collection
             </h2>
             <h6>Hover over the circles to see information about that item</h6>
+            <img class="legend" src="images/legend.svg">
             <svg id="modelVizSVG"></svg>
             <div class="sideModal" id="69.269.6a,-b">
               <button id="close-button" onclick="closePanel()">
@@ -228,7 +229,7 @@
               </div>
               <div class="sideModalText">
                 <p>
-                  This artifact has a cumulative score of 15. <br />
+                  <span class="u">This artifact has a cumulative score of 15.</span> <br />
                   <br />
                   The repatriation model likely picked up on this item because
                   it meets the Preservation KPI's material assessment as a stone
@@ -265,7 +266,7 @@
               </div>
               <div class="sideModalText">
                 <p>
-                  This artifact has a cumulative score of 10. <br />
+                  <span class="u">This artifact has a cumulative score of 10.</span> <br />
                   <br />
                   The repatriation model considered this item to be contentious.
                   Likely because it's an item from an Tlingit indigenous people
@@ -296,7 +297,7 @@
               </div>
               <div class="sideModalText">
                 <p>
-                  This artifact has a cumulative score of 16. <br />
+                  <span class="u">This artifact has a cumulative score of 16.</span> <br />
                   <br />
                   The model picked up on a few American items, which makes sense
                   considering how the metrics were combined. Items in North
@@ -321,7 +322,7 @@
                   <h3>Symbolism</h3>
                   <p>
                     For this model, the Symbolism metric was calculated by
-                    binary scoring any object name within the "Object Column" of
+                    binary scoring any object name within the <span class="u">"Object Column"</span> in
                     the dataset that had any naming convention with a reference to funerary, marriage,
                     armour/war or ceremonial meaning as 1.
                   </p>
@@ -332,7 +333,7 @@
                   <h3>Legality</h3>
                   <p>
                     The legality metric was calculated by scoring any item
-                    within the "Culture" column in the dataset that had a culture
+                    within the <span class="u">"Culture" column</span>in the dataset that had a culture
                     identified as "peoples" or a historically marginalized
                     community as 1, while the rest of the items were scored as 0.
                   </p>
@@ -345,18 +346,18 @@
                     The preservation metric is a combination of two parts, the
                     materiality score and the risk assessment score. The
                     materiality portion was calculated by assessing the strength
-                    of the material the artifact is made from. Materiality scale was measured as such: Clay = 1
-                    Wood = 2 Ivory & Bone = 3 Stone = 4 Metals = 5. The logic behind this is the stronger
+                    of the material the artifact is made from. <span class="u">Materiality scale was measured as such: Clay = 1
+                    Wood = 2 Ivory & Bone = 3 Stone = 4 Metals = 5.</span> The logic behind this is the stronger
                     the material, the easier the artifact would be to return
                     without damage from transport or the elements.
                     <br />
-                    The risk assessment score was calculated from the official
-                    Peace Index Scale, spcifically their regional scale from
+                    The risk assessment score was calculated from the
+                    <span class="u">Peace Index Scale</span>, spcifically their regional scale from
                     most safe region to unsafest region. Regional scoring:
-                    Europe = 1 North America = 2 Asia-Pacific = 3 South America
+                    <span class="u">Europe = 1 North America = 2 Asia-Pacific = 3 South America
                     = 4 Central America & caribbean = 5 Sub-Saharan Africa = 6
                     Russia & Eurasia = 7 South Asia = 8 Middle East & North
-                    Africa = 9
+                    Africa = 9</span>
                     <br />
                     The safer the region, the less risk of damage to the
                     artifact in the midst of transportation and relocation.
@@ -371,9 +372,9 @@
                     item in question by looking at Google Searches over a period
                     of time. This way we can assess if an item is top of mind
                     for the region and part of the overall public's discussions.
-                    If the Google search shows a higher search rate (>1000),
+                    If the <span class="u">Google search shows a higher search rate (>1000),
                     then the item is given a score of 1, if not, it is scored as
-                    0. However, in this particular model, the Morality metric
+                    0.</span> However, in this particular model, the Morality metric
                     was not applied. This metric can always be applied if deemed
                     appropriate for the situation to provide further context.
                   </p>
