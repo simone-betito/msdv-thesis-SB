@@ -16,7 +16,7 @@ d3.select(window).on("resize", function() {
 var svg = d3
   .select("#svg-map")
   .append("svg")
-  .attr("viewBox", "0 0 1200 600")
+  .attr("viewBox", "0 0 " + width + " " + height)
   .attr("width", width)
   .attr("height", height);
 
