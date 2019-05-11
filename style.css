@@ -588,6 +588,10 @@ circle {
   opacity: 0.75;
 }
 
+circle:hover {
+  cursor: pointer;
+}
+
 /* .circle:hover {
 	r: 20;
 } */
@@ -662,8 +666,9 @@ circle {
 }
 
 .c69_269_6a_b:hover {
-  fill: #707070;
-  stroke: #707070;
+  fill: #b16e6e;
+  stroke: #b16e6e;
+  r: 15;
 }
 
 .c83_2_392 {
@@ -673,8 +678,9 @@ circle {
 }
 
 .c83_2_392:hover {
-  fill: #707070;
-  stroke: #707070;
+  fill: #b16e6e;
+  stroke: #b16e6e;
+  r: 15;
 }
 
 .cL_2017_54_3 {
@@ -684,8 +690,9 @@ circle {
 }
 
 .cL_2017_54_3:hover {
-  fill: #707070;
-  stroke: #707070;
+  fill: #b16e6e;
+  stroke: #b16e6e;
+  r: 15;
 }
 
 /*******************************/

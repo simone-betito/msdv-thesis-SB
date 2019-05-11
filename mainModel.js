@@ -86,7 +86,7 @@ function showingSlide_4() {
       })
       //.style("fill", "rgb(112,112,112)")
       .attr("cy", -100)
-      .on("mouseover", d => {
+      .on("mouseover", function(d) {
         console.log(d);
         tooltipMain.show(
           `<span class="label">Object Number:</span> ${d.ObjectNumber}<br>
@@ -96,12 +96,18 @@ function showingSlide_4() {
         <span class="label">Model Score:</span> ${d.totalKPIs}<br>
         `
         );
+
+        d3.select(this).moveToFront();
+        d3.selectAll("circle").attr("fill-opacity", 0.2);
+        d3.select(this).attr("fill-opacity", 1);
       })
       .on("mousemove", function(d) {
         tooltipMain.move();
       })
-      .on("mouseout", d => {
+      .on("mouseout", function(d) {
         tooltipMain.hide();
+        d3.select(this).moveToBack();
+        d3.selectAll("circle").attr("fill-opacity", 0.75);
       })
       .on("click", function(d) {
         let lookup = document.querySelector(".show-panel");
@@ -125,7 +131,7 @@ function showingSlide_4() {
       .ease(d3.easeLinear)
       .duration((d, i) => {
         let shelf = levels[d.CaseTotalKPI];
-        return scaleY(shelf) * 20;
+        return scaleY(shelf) * (Math.floor(Math.random() * 6) + 5);
       })
       .attr("cy", (d, i) => {
         let shelf = levels[d.CaseTotalKPI];
@@ -246,6 +252,21 @@ function showingSlide_4() {
       .attr("font-size", "17px");
 
     /////////////////////////////////////////////
+
+    d3.selection.prototype.moveToFront = function() {
+      return this.each(function() {
+        this.parentNode.appendChild(this);
+      });
+    };
+
+    d3.selection.prototype.moveToBack = function() {
+      return this.each(function() {
+        var firstChild = this.parentNode.firstChild;
+        if (firstChild) {
+          this.parentNode.insertBefore(this, firstChild);
+        }
+      });
+    };
 
     // tooltip method
     var tooltipMain = {
