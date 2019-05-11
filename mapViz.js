@@ -111,7 +111,12 @@ function ready(error, dataGeo, data) {
     .style("stroke-width", 20)
     .on("mouseover", d => {
       tooltip.show(
-        `<span class="label">Item Name:</span> ${d.itemName}<br>
+        `
+
+
+
+        <div>
+        <h3>${d.itemName}</h3>
         <span class="label">Country of Origin:</span> ${
           d.countryOfOrigination
         }<br>
@@ -119,7 +124,8 @@ function ready(error, dataGeo, data) {
         <span class="label">Year Repatriated:</span> ${
           d.year > 0 ? d.year : "None"
         }
-        <img src="images/${d.imageURL}">
+        </div>
+        <img src="images/${d.imageURL}" alt="image of ${d.itemName}">
         `
       );
     })

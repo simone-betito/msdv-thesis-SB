@@ -89,11 +89,17 @@ function showingSlide_4() {
       .on("mouseover", function(d) {
         console.log(d);
         tooltipMain.show(
-          `<span class="label">Object Number:</span> ${d.ObjectNumber}<br>
-        <span class="label">Item Name:</span> ${d.ObjectName}<br>
-        <span class="label">Culture of Origin:</span> ${d.Culture}<br>
+          `
+          <div>
+          <h3>${d.ObjectName}</h3>
+          <span class="label">Object Number:</span> ${d.ObjectNumber}<br>
+  
+        <span class="label">Culture of Origin:</span> ${
+          d.Culture === "" ? "not defined" : d.Culture
+        }<br>
         <span class="label">Classification:</span> ${d.Classification}<br>
         <span class="label">Model Score:</span> ${d.totalKPIs}<br>
+        </div>
         `
         );
 
