@@ -1,5 +1,5 @@
 Repatriation: An Approach For A Fairer Museum
 
-This thesis visualization work proposes a model for the determination of an item's eligibility for its potential return. It also maps repatriation cases worldwide and applies the model to a sample of the METs collection.
+Repatriation is defined as: “the restoration of something to its rightful owner.” This visualization proposes a model for the determination of the suitability of repatriation of an artifact or art piece. It also maps repatriation cases worldwide and applies the model to a sample of the collection at the Metropolitan Museum of Art.
 
 [github io link](https://simone-betito.github.io/msdv-thesis-SB/)
