@@ -16,6 +16,7 @@ d3.select(window).on("resize", function() {
 var svg = d3
   .select("#svg-map")
   .append("svg")
+  .attr("viewBox", "0 0 1200 600")
   .attr("width", width)
   .attr("height", height);
 
@@ -73,7 +74,7 @@ function ready(error, dataGeo, data) {
     .attr("fill", "#b8b8b8")
     .attr("d", d3.geoPath().projection(projection))
     .style("stroke", "#fff")
-    .style("stroke-width", 0);
+    .style("stroke-width", 0.5);
 
   // Add the path (WITHOUT tooltip)
   svg

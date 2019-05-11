@@ -102,13 +102,13 @@ ul a {
 #slide-next-arrow {
   cursor: pointer;
   position: fixed;
-  bottom: 20px;
+  bottom: 5px;
   font-size: 2rem;
   line-height: 1;
   /* font-weight: bold; */
   z-index: 1;
   opacity: 0.5;
-  padding: 8px 16px;
+  /* padding: 8px 16px; */
 
   /* width: 16px; */
   /* height: 16px; */
@@ -272,6 +272,11 @@ ul a {
 /*******************************/
 /* map */
 
+svg {
+  width: 100vw;
+  height: 100vh;
+}
+
 #svg-map h1 {
   /* margin-top: 100px; */
   padding-top: 1rem;
@@ -385,7 +390,7 @@ path:hover {
 
 .modelExplainerText0 {
   position: fixed;
-  right: 10vw;
+  /* right: 10vw; */
   top: 40%;
   width: 100%;
   text-align: center;
@@ -394,6 +399,11 @@ path:hover {
 .arrow2 {
   vertical-align: middle;
   padding-bottom: 5px;
+}
+
+/* tutor add */
+.modelText4 {
+  display: inline;
 }
 
 /* model explainer slide 2 */
