@@ -152,16 +152,36 @@ var tooltip = {
       .html(t)
       .transition()
       .duration(200)
-      .style("left", d3.event.pageX + 20 + "px")
-      .style("top", d3.event.pageY - 20 + "px")
+      .style(
+        "left",
+        d3.event.pageX + 20 > width - 300
+          ? width - 300 + "px"
+          : d3.event.pageX + 20 + "px"
+      )
+      .style(
+        "top",
+        d3.event.pageY + 20 > height - 550
+          ? height - 550 + "px"
+          : d3.event.pageY - 20 + "px"
+      )
       .style("opacity", 0.4);
   },
   move: function() {
     this.element
       .transition()
       .duration(30)
-      .style("left", d3.event.pageX + 20 + "px")
-      .style("top", d3.event.pageY - 20 + "px")
+      .style(
+        "left",
+        d3.event.pageX + 20 > width - 300
+          ? width - 300 + "px"
+          : d3.event.pageX + 20 + "px"
+      )
+      .style(
+        "top",
+        d3.event.pageY + 20 > height - 550
+          ? height - 550 + "px"
+          : d3.event.pageY - 20 + "px"
+      )
       .style("opacity", 0.9);
   },
   hide: function() {
