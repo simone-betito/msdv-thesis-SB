@@ -227,7 +227,7 @@ ul a {
 #dialogue {
   position: absolute;
   width: 50%;
-  min-width: 400px;
+  min-width: 300px;
   max-width: 2000px;
   max-height: 70%;
   overflow-y: auto;
@@ -779,4 +779,20 @@ circle:hover {
 
 #Sources h1 {
   margin-top: 3em;
+}
+
+@media (max-width: 550px) {
+  #title {
+    width: auto;
+  }
+  .modelText4 {
+    display: block;
+  }
+
+  #model {
+  }
+
+  .modelVizSVG {
+    width: auto;
+  }
 }
